@@ -1,6 +1,26 @@
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
-document.addEventListener("DOMContentLoaded", function(e){
 
+document.getElementById("button").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    if (document.getElementById("username").value.length != 0 &&
+        document.getElementById("password").value.length != 0) {
+        return location.href = "index.html";
+    } else {
+        if (document.getElementById("username").value.length == 0) {
+            document.getElementById("username").style.borderColor = 'red';
+        } else {
+            document.getElementById("username").style.removeProperty('border-color');;
+        }
+
+        if (document.getElementById("password").value.length == 0) {
+            document.getElementById("password").style.borderColor = 'red';
+
+        } else {
+            document.getElementById("password").style.removeProperty('border-color');
+
+        }
+    }
 });
