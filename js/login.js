@@ -11,15 +11,21 @@ document.getElementById("button").addEventListener("click", function(e) {
     } else {
         if (document.getElementById("username").value.length == 0) {
             document.getElementById("username").style.borderColor = 'red';
+            document.getElementById("formulario").innerHTML = 'Usuario y/o contraseña inválido.' + '<br>' + '<br>';
+            document.getElementById("formulario").style.color = 'red';
         } else {
-            document.getElementById("username").style.removeProperty('border-color');;
+            document.getElementById("username").style.removeProperty('border-color');
+            document.getElementById("formulario").style.removeProperty('color');
         }
 
         if (document.getElementById("password").value.length == 0) {
             document.getElementById("password").style.borderColor = 'red';
+            document.getElementById("formulario").innerHTML = 'Usuario y/o contraseña inválido.' + '<br>' + '<br>';
+            document.getElementById("formulario").style.color = 'red';
 
         } else {
             document.getElementById("password").style.removeProperty('border-color');
+            document.getElementById("formulario").style.removeProperty('color');
 
         }
     }
