@@ -15,7 +15,7 @@ document.getElementById("button").addEventListener("click", function(e) {
         //localStorage.setItem() lo guarda bajo la clave "user_logg"
         localStorage.setItem("user_logg", document.getElementById("username").value);
 
-        return location.href = "index.html";
+        return location.href = "principal-page.html";
 
     } else {
         if (document.getElementById("username").value.length == 0) {
