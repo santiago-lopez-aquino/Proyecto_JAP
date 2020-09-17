@@ -51,7 +51,7 @@ function sortAndShowProducts(sortCriteria, productsArray) {
 }
 
 document.addEventListener("DOMContentLoaded", function(e) {
-    getJSONData(PRODUCTS_URL).then(function(resultObj) {
+    getJSONData(PRODUCTS_AWS_URL).then(function(resultObj) {
         if (resultObj.status === "ok") {
             console.log(resultObj.data);
             sortAndShowProducts(ORDER_ASC_BY_PRICE, resultObj.data);

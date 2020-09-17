@@ -13,6 +13,57 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .commentbox {
+            border: 0.5px solid rgb(122, 122, 122);
+            border-radius: 7px;
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        .rate {
+            float: left;
+            height: 46px;
+            padding: 0 10px;
+        }
+        
+        .rate:not(:checked)>input {
+            position: absolute;
+            top: -9999px;
+        }
+        
+        .rate:not(:checked)>label {
+            float: right;
+            width: 1em;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            font-size: 30px;
+            color: #ccc;
+        }
+        
+        .rate:not(:checked)>label:before {
+            content: '★ ';
+        }
+        
+        .rate>input:checked~label {
+            color: orange;
+        }
+        
+        .rate:not(:checked)>label:hover,
+        .rate:not(:checked)>label:hover~label {
+            color: orange;
+        }
+        
+        .rate>input:checked+label:hover,
+        .rate>input:checked+label:hover~label,
+        .rate>input:checked~label:hover,
+        .rate>input:checked~label:hover~label,
+        .rate>label:hover~input:checked~label {
+            color: orange;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,14 +78,83 @@
 
         </div>
     </nav>
-    <div class="container p-5">
-        <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-            <h4 class="alert-heading">¡A trabajar! :)</h4>
-            <p>Esta sección corresponde a: Entrega 3 (Fecha de entrega: 13/09/2020) y Entrega 4 (Fecha de entrega: 20/09/2020).</p>
-            <hr>
-            <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <main>
+        <div class="container mt-5">
+            <div class="text-center p-4">
+                <h2>Descripción del producto</h2>
+                <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
+                <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto seleccionado previamente, siempre se visualizará el presente: <strong>Chevrolet Onix Joy</strong>.</p>
+            </div>
+            <h3 id="productName"></h3>
+            <hr class="my-3">
+            <dl>
+                <dt>Descripción</dt>
+                <dd>
+                    <p id="productDescription"></p>
+                </dd>
+
+                <dt>Categoría del producto</dt>
+                <dd>
+                    <p id="productCategory"></p>
+                </dd>
+
+                <dt>Cantidad de articulos vendidos</dt>
+                <dd>
+                    <p id="productSoldCount"></p>
+                </dd>
+
+                <dt>Precio:</dt>
+                <dd>
+                    <p id="productCostAndCurrency"></p>
+                </dd>
+
+                <dt>Imágenes ilustrativas</dt>
+                <dd>
+                    <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
+                    </div>
+                </dd>
+
+                <dt>Productos relacionados</dt>
+                <dd>
+                    <div id="relatedProducts">
+                    </div>
+                </dd>
+            </dl>
+            <a type="button" class="btn btn-light btn-lg btn-block" href="products.html">Ver más productos</a>
+            <br>
+            <div>
+                <hr class="my-3">
+                <br>
+                <d1>
+                    <dt>Comentarios:</dt>
+                </d1>
+                <br>
+                <div class="commentspace" id="prod-list-comments">
+                </div>
+            </div>
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+            </div>
+            <br>
+            <br>
+            <form class="form-comments">
+                <textarea name="comment-area" style="width:596px; height:100px; " placeholder="Escribe un comentario..."></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
         </div>
-    </div>
+        </div>
+
+    </main>
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
