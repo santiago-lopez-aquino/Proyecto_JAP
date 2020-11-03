@@ -44,27 +44,64 @@
 
         </div>
     </nav>
-    <div class="container p-5">
-        <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-            <h4 class="alert-heading">¡A trabajar! :)</h4>
-            <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-            <hr>
-            <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+    <main>
+        <div class="container">
+            <div class="text-center p-4">
+                <h2>Carrito</h2>
+                <p class="lead">Compra tus productos de la forma más sencilla.</p>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-10 order-md-1">
+                    <h4 class="mb-3">Artículos</h4>
+                    <hr class="mb-3">
+                    <div class="row">
+                        <p class="col-md-4 offset-md-2"><strong>Nombre</strong></p>
+                        <p class="col-md-2"><strong>Costo</strong></p>
+                        <p class="col-md-2"><strong>Cantidad</strong></p>
+                        <p class="col-md-2"><strong>Subtotal</strong></p>
+                    </div>
+                    <hr class="mb-3 mt-1">
+                    <div id="cart"></div>
+                    <hr class="mb-4">
+                    <h4 class="mb-3">Costos</h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Subtotal</h6>
+                            </div>
+                            <span class="text-muted" id="subtotal">-</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">Costo de envio</h6>
+                            </div>
+                            <span class="text-muted" id="envio">-</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Total ($)</span>
+                            <strong id="total">-</strong>
+                        </li>
+                    </ul>
+                    <hr class="mb-4">
+                    <button class="btn btn-lg dropbutton" type="submit">Finalizar compra</button>
+                    <hr class="mb-4">
+                </div>
+            </div>
+            <div id="spinner-wrapper">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <script src="js/jquery-3.4.1.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/dropzone.js"></script>
+            <script src="js/init.js"></script>
+            <script src="js/cart.js"></script>
         </div>
-    </div>
-    <div id="spinner-wrapper">
-        <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/dropzone.js"></script>
-    <script src="js/init.js"></script>
-    <script src="js/cart.js"></script>
+    </main>
 </body>
 
 </html>
