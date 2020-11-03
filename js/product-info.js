@@ -70,7 +70,7 @@ function showProductsList() {
                 <div class="card-body">
                     <h5 class="card-title">` + product.name + `</h5>
                     <p class="card-text">` + product.description + "<br>" + product.currency + " " + product.cost + `</p>
-                    <a href="" class="btn btn-primary">Ver</a>
+                    <a href="" class="btn dropbutton">Ver</a>
                 </div>
             </div>
                     
