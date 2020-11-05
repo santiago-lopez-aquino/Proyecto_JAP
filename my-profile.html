@@ -34,23 +34,61 @@
 </head>
 
 <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
-        <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" href="principal-page.html">Inicio</a>
-            <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-            <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-            <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-            <a id="dropDownMenuButton" href="my-profile.html"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse px-2" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto mx-auto">
+                <li class="nav-item px-5">
+                    <a class="nav-link" href="principal-page.html">Inicio </a>
+                </li>
+                <li class="nav-item px-5">
+                    <a class="nav-link" href="categories.html">Categorías </a>
+                </li>
+                <li class="nav-item px-5">
+                    <a class="nav-link" href="products.html">Productos </a>
+                </li>
+                <li class="nav-item px-5">
+                    <a class="nav-link" href="sell.html">Vender </a>
+                </li>
+                <li class="nav-item dropdown px-5">
+                    <a id="dropDownMenuButton" href="my-profile.html"></a>
+                </li>
+            </ul>
+
         </div>
     </nav>
-    <div class="container p-5">
+    <div>
+        <form>
+            <label>Primer Nombre</label>
+            <input type="text" class="form-control" id="Name1" placeholder="" value="" required>
+            <label>Segundo Nombre</label>
+            <input type="text" class="form-control" id="Name2" placeholder="" value="" required>
+            <label>Primer Apellido</label>
+            <input type="text" class="form-control" id="Name3" placeholder="" value="" required>
+            <label>Segundo Apellido</label>
+            <input type="text" class="form-control" id="Name4" placeholder="" value="" required>
+            <label>E-mail</label>
+            <input type="text" class="form-control" id="Email" placeholder="" value="" required>
+            <label>Edad</label>
+            <input type="text" class="form-control" id="Age" placeholder="" value="" required>
+            <label>Telefono de contacto</label>
+            <input type="text" class="form-control" id="Phone" placeholder="" value="" required>
+            <button class="btn dropbutton" onclick="guardarCambios();" type="submit">Guardar cambios</button>
+        </form>
+
+
+    </div>
+    <!--div class="container p-5">
         <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
             <h4 class="alert-heading">¡A trabajar! :)</h4>
             <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
             <hr>
             <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
         </div>
-    </div>
+    </div-->
     <footer class="text-muted bg-light">
         <div class="container">
             <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>

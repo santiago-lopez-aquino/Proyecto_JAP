@@ -109,7 +109,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 function showProductsList() {
 
-    let htmlContentToAppend = "";
+    let htmlContentToAppend = `<div class="album py-5 bg-light">
+                                    <div class="container">
+                                        <div class="row">
+    `;
     for (let i = 0; i < currentProductsArray.length; i++) {
         let products = currentProductsArray[i];
 
@@ -117,25 +120,25 @@ function showProductsList() {
             ((maxCost == undefined) || (maxCost != undefined && parseInt(products.cost) <= maxCost))) {
 
             htmlContentToAppend += `
-            <a href="product-info.html" class="list-group-item list-group-item-action">
-                <div class="row">
-                    <div class="col-3">
-                        <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
+            <div class="col-md-4">
+                        <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                            <img class="bd-placeholder-img card-img-top" src="` + products.imgSrc + `">
+                            <h3 class="m-3">` + products.name + `</h3>
+                            <small class="">` + products.soldCount + ` artículos vendidos</small>
+                            <div class="card-body">
+                                <p class="card-text">` + products.description + `</p>
+                                <p class="card-text">` + products.currency + `  ` + products.cost + `</p>
+                            </div>
+                        </a>
+                    </div>
 
-                    </div>
-                    <div class="col">
-                        <div class="d-flex w-100 justify-content-between">
-                            <h4 class="mb-1">` + products.name + `</h4>
-                            <small class="text-muted">` + products.soldCount + ` artículos vendidos</small>
-                        </div>
-                        <p class="mb-1">` + products.description + `</p>
-                        <h6 class="mb-1">Precio: ` + products.currency + `  ` + products.cost + `</h6>
-                    </div>
-                </div>
-            </a>
+
             `
         }
-
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend;
     }
+    htmlContentToAppend += `</div>
+    </div>
+    </div>
+     `
 }

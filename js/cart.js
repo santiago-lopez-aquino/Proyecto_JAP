@@ -6,6 +6,10 @@ var variable = [];
 var cartProducts = [];
 var count = [];
 
+function showSubtotal(cartProducts) {
+
+}
+
 function showCart() {
     let htmlContentToAppend = "";
     for (let i = 0; i < cartProducts.length; i++) {
@@ -23,6 +27,7 @@ function showCart() {
         `
     }
     document.getElementById("cart").innerHTML = htmlContentToAppend;
+    //document.getElementById("subtotaltotal").innerHTML = variable;
 }
 
 function updatePrice() {
@@ -32,6 +37,7 @@ function updatePrice() {
 
     }
     document.getElementById("subtotal").innerHTML = variable;
+    document.getElementById("subtotaltotal").innerHTML = variable;
 }
 
 document.addEventListener("DOMContentLoaded", function(e) {
