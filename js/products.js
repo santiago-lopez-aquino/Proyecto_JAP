@@ -124,11 +124,11 @@ function showProductsList() {
                         <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
                             <img class="bd-placeholder-img card-img-top" src="` + products.imgSrc + `">
                             <h3 class="m-3">` + products.name + `</h3>
-                            <small class="">` + products.soldCount + ` artículos vendidos</small>
                             <div class="card-body">
                                 <p class="card-text">` + products.description + `</p>
                                 <p class="card-text">` + products.currency + `  ` + products.cost + `</p>
-                            </div>
+                                <small class="card-text">` + products.soldCount + ` artículos vendidos</small>
+                                </div>
                         </a>
                     </div>
 

@@ -60,27 +60,36 @@
 
         </div>
     </nav>
-    <div>
-        <form>
-            <label>Primer Nombre</label>
-            <input type="text" class="form-control" id="Name1" placeholder="" value="" required>
-            <label>Segundo Nombre</label>
-            <input type="text" class="form-control" id="Name2" placeholder="" value="" required>
-            <label>Primer Apellido</label>
-            <input type="text" class="form-control" id="Name3" placeholder="" value="" required>
-            <label>Segundo Apellido</label>
-            <input type="text" class="form-control" id="Name4" placeholder="" value="" required>
-            <label>E-mail</label>
-            <input type="text" class="form-control" id="Email" placeholder="" value="" required>
-            <label>Edad</label>
-            <input type="text" class="form-control" id="Age" placeholder="" value="" required>
-            <label>Telefono de contacto</label>
-            <input type="text" class="form-control" id="Phone" placeholder="" value="" required>
-            <button class="btn dropbutton" onclick="guardarCambios();" type="submit">Guardar cambios</button>
-        </form>
-
-
-    </div>
+    <main>
+        <div class="container mt-5">
+            <div class="col-md-8">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Primer nombre</label>
+                            <input type="text" class="form-control" id="Name1" placeholder="" value="" required><br>
+                            <label>Primer apellido</label>
+                            <input type="text" class="form-control" id="Name3" placeholder="" value="" required><br>
+                            <label>Edad</label>
+                            <input type="text" class="form-control" id="Age" placeholder="" value="" required><br>
+                            <label>Telefono de contacto</label>
+                            <input type="text" class="form-control" id="Phone" placeholder="" value="" required><br>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Segundo nombre</label>
+                            <input type="text" class="form-control" id="Name2" placeholder="" value="" required><br>
+                            <label>Segundo apellido</label>
+                            <input type="text" class="form-control" id="Name4" placeholder="" value="" required><br>
+                            <label>E-mail</label>
+                            <input type="text" class="form-control" id="Email" placeholder="" value="" required><br>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btn dropbutton" onclick="guardarCambios();" type="submit">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </main>
     <!--div class="container p-5">
         <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
             <h4 class="alert-heading">¡A trabajar! :)</h4>

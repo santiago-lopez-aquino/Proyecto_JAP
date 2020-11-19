@@ -55,7 +55,10 @@ function showComments() {
 
 function showProductsList() {
 
-    let htmlContentToAppend = "";
+    let htmlContentToAppend = `<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+`;
     console.log(currentProductsArray.length)
     for (let i = 0; i < currentProductsArray.length; i++) {
         let product = currentProductsArray[i];
@@ -65,7 +68,7 @@ function showProductsList() {
 
             htmlContentToAppend += `
                 
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; margin: 18px">
                 <img src="` + product.imgSrc + `" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">` + product.name + `</h5>
@@ -78,6 +81,10 @@ function showProductsList() {
         }
         document.getElementById("relatedProducts").innerHTML = htmlContentToAppend;
     }
+    htmlContentToAppend += `</div>
+    </div>
+    </div>
+     `
 }
 
 document.addEventListener("DOMContentLoaded", function(e) {
